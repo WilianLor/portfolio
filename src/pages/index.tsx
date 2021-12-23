@@ -51,6 +51,7 @@ const Home = () => {
               className="socialMedia"
               href="https://github.com/WilianLor"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <BsGithub color="#fff" size="3.5rem" />
             </a>
@@ -58,6 +59,7 @@ const Home = () => {
               className="socialMedia"
               href="https://www.linkedin.com/in/wilian-lorencetto-62a4031a7/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <BsLinkedin color="#fff" size="3.5rem" />
             </a>
@@ -65,6 +67,7 @@ const Home = () => {
               className="socialMedia"
               href="https://app.rocketseat.com.br/me/wilianlorencetto"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 stroke="currentColor"
