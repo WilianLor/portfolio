@@ -38,7 +38,11 @@ const Home = () => {
               17 anos, Desenvolvedor full-stack Javascript, Borborema, São
               Paulo, Brasil
             </p>
-            <ContactButton href="https://wa.me/+55016997128962" target="_blank">
+            <ContactButton
+              href="https://wa.me/+55016997128962"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Mande-me uma mensagem!
             </ContactButton>
           </TextContent>
@@ -65,7 +69,7 @@ const Home = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 35 35"
                 color="#fff"
                 height="3.5rem"
@@ -120,12 +124,13 @@ const Home = () => {
         </ExperienceBackground>
       </ExperienceContainer>
       <ProjectContainer id="projects">
-          <ProjectContent>
-            <ProjectsTitle>
+        <ProjectContent>
+          <ProjectsTitle>
             <h2>Principais projetos</h2>
             <a
               href="https://github.com/WilianLor?tab=repositories"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Todos os repositórios <BsArrowRightShort size="2rem" />
             </a>
@@ -166,7 +171,7 @@ const Home = () => {
               ]}
             />
           </Projects>
-          </ProjectContent>
+        </ProjectContent>
       </ProjectContainer>
     </Page>
   );
