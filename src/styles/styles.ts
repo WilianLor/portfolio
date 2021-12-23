@@ -1,0 +1,294 @@
+import styled from "styled-components";
+
+export const Page = styled.div`
+  width: 100%;
+`;
+
+export const ProfileContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ProfileContent = styled.div`
+  height: 100%;
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12rem;
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+`;
+
+export const TextContent = styled.section`
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+
+    p,
+    h1 {
+      text-align: center;
+      width: 90%;
+    }
+  }
+`;
+
+export const ContactButton = styled.a`
+  background: var(--purple);
+  color: var(--white);
+  padding: 1rem;
+  width: 15.5rem;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+`;
+
+export const SocialMedias = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: filter 0.2s;
+
+  a {
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.7);
+    }
+
+    svg {
+      fill: var(--white);
+    }
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+`;
+
+export const ExperienceContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+
+  @media (max-width: 1200px) {
+    height: auto;
+  }
+`;
+
+export const ExperienceBackground = styled.div`
+  background: var(--black-4);
+  width: 100%;
+  height: 70%;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 5rem;
+  }
+`;
+
+export const ExperienceContent = styled.div`
+  margin: 0 auto;
+  width: 1120px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+`;
+
+export const ExperienceYears = styled.h1`
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  gap: 1rem;
+  text-align: center;
+  span {
+    color: var(--purple);
+    font-size: 5rem;
+    font-weight: 800;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    margin-top: 8rem;
+  }
+`;
+
+export const ExperienceSkills = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 10%;
+  gap: 3rem;
+
+  p {
+    width: 45rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+    align-items: center;
+
+    p {
+      text-align: center;
+      width: 90%;
+    }
+    section {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem;
+
+      @media (max-width: 720px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+`;
+
+export const ProjectContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-2);
+  padding-top: 4rem;
+
+  @media (max-width: 1200px) {
+    height: auto;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+`;
+
+export const ProjectContent = styled.div`
+  width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const ProjectsTitle = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  a {
+    display: flex;
+    color: var(--purple);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+`;
+
+export const Projects = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: 720px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+`;
