@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const HeaderContainer = styled.header`
+.headerContainer {
   position: fixed;
   top: 0;
   background: transparent;
@@ -8,9 +6,9 @@ export const HeaderContainer = styled.header`
   align-items: center;
   width: 100vw;
   height: 6rem;
-`;
+}
 
-export const HeaderContent = styled.div`
+.headerContent {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,24 +36,22 @@ export const HeaderContent = styled.div`
       font-size: 1.35rem;
 
       @media (max-width: 720px) {
-      font-size: 1.2rem;
-    }
-    }
-  }
-`;
-
-export const Nav = styled.nav`
-  #link {
-    font-size: 1rem;
-    font-weight: 400;
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.7);
-    }
-
-    & + #link {
-      margin-left: 1.5rem;
+        font-size: 1.2rem;
+      }
     }
   }
-`;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: 400;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+
+  & + .link {
+    margin-left: 1.5rem;
+  }
+}

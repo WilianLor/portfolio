@@ -1,23 +1,23 @@
-import { HeaderContainer, HeaderContent, Nav } from "./styles";
+import styles from "./styles.module.scss";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const Header = () => {
   return (
-    <HeaderContainer>
-      <HeaderContent>
+    <header className={styles.headerContainer}>
+      <div className={styles.headerContent}>
         <span>wilian.lorencetto1@gmail.com</span>
-        <Nav>
-          <AnchorLink href="#home" id="link">
+        <nav className={styles.navContainer}>
+          <AnchorLink href="#home" className={styles.link}>
             Home
           </AnchorLink>
-          <AnchorLink href="#experiences" id="link">
+          <AnchorLink href="#experiences" className={styles.link}>
             Experiências
           </AnchorLink>
-          <AnchorLink href="#projects" id="link">
+          <AnchorLink href="#projects" className={styles.link}>
             Projetos
           </AnchorLink>
-        </Nav>
-      </HeaderContent>
-    </HeaderContainer>
+        </nav>
+      </div>
+    </header>
   );
 };

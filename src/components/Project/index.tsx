@@ -1,9 +1,4 @@
-import {
-  ProjectContainer,
-  TagsContainer,
-  GitContainer,
-  TextContainer,
-} from "./styles";
+import styles from "./styles.module.scss";
 import { IProps } from "./IProps";
 import { BsArrowRightShort } from "react-icons/bs";
 
@@ -15,17 +10,17 @@ export const Project = ({
   backend = null,
 }: IProps) => {
   return (
-    <ProjectContainer>
-      <TextContainer>
+    <div className={styles.projectsContainer}>
+      <div className={styles.textContainer}>
         <h2>{name}</h2>
         <p>{description}</p>
-      </TextContainer>
-      <TagsContainer>
+      </div>
+      <div className={styles.tagsContainer}>
         {tags.map((tag, index) => (
           <span key={index}>{tag}</span>
         ))}
-      </TagsContainer>
-      <GitContainer>
+      </div>
+      <div className={styles.gitContainer}>
         <a href={frontend} target="_blank" rel="noopener noreferrer">
           Frontend <BsArrowRightShort size="1.5rem" />
         </a>
@@ -36,7 +31,7 @@ export const Project = ({
         ) : (
           ""
         )}
-      </GitContainer>
-    </ProjectContainer>
+      </div>
+    </div>
   );
 };

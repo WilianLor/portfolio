@@ -1,20 +1,4 @@
-import {
-  Page,
-  ProfileContainer,
-  ExperienceContainer,
-  ContactButton,
-  ProfileContent,
-  SocialMedias,
-  TextContent,
-  ExperienceBackground,
-  ExperienceContent,
-  ExperienceSkills,
-  ExperienceYears,
-  ProjectContainer,
-  ProjectContent,
-  Projects,
-  ProjectsTitle,
-} from "../styles/styles";
+import styles from "../styles/home.module.scss";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiTsnode, SiReact, SiNextdotjs } from "react-icons/si";
 import Head from "next/head";
@@ -26,27 +10,28 @@ import { Project } from "../components/Project";
 
 const Home = () => {
   return (
-    <Page>
+    <div className={styles.page}>
       <Head>
         <title>Wilian Lorencetto</title>
       </Head>
-      <ProfileContainer id="home">
-        <ProfileContent>
-          <TextContent>
+      <div className={styles.profileContainer} id="home">
+        <div className={styles.profileContent}>
+          <section className={styles.textContent}>
             <h1>Wilian Lorencetto</h1>
             <p>
               17 anos, Desenvolvedor full-stack Javascript, Borborema, São
               Paulo, Brasil
             </p>
-            <ContactButton
+            <a
+              className={styles.contactButton}
               href="https://wa.me/+55016997128962"
               target="_blank"
               rel="noopener noreferrer"
             >
               Mande-me uma mensagem!
-            </ContactButton>
-          </TextContent>
-          <SocialMedias>
+            </a>
+          </section>
+          <section className={styles.socialMedias}>
             <a
               className="socialMedia"
               href="https://github.com/WilianLor"
@@ -86,16 +71,16 @@ const Home = () => {
                 </g>
               </svg>
             </a>
-          </SocialMedias>
-        </ProfileContent>
-      </ProfileContainer>
-      <ExperienceContainer id="experiences">
-        <ExperienceBackground>
-          <ExperienceContent>
-            <ExperienceYears>
+          </section>
+        </div>
+      </div>
+      <div className={styles.experienceContainer} id="experiences">
+        <div className={styles.experienceBackground}>
+          <div className={styles.experienceContent}>
+            <section className={styles.experienceYears}>
               <span>2+</span> Anos de experiência.
-            </ExperienceYears>
-            <ExperienceSkills>
+            </section>
+            <section className={styles.experienceSkills}>
               <p>
                 Técnico em Desenvolvimento de Sistemas - ETEC, Novo
                 Horizonte-SP, desenvolvedor web mobile e backend.
@@ -122,13 +107,13 @@ const Home = () => {
                   discoveryLink="https://nodejs.org/en/"
                 />
               </section>
-            </ExperienceSkills>
-          </ExperienceContent>
-        </ExperienceBackground>
-      </ExperienceContainer>
-      <ProjectContainer id="projects">
-        <ProjectContent>
-          <ProjectsTitle>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div className={styles.projectsContainer} id="projects">
+        <div className={styles.projectsContent}>
+          <section className={styles.projectsTitle}>
             <h2>Principais projetos</h2>
             <a
               href="https://github.com/WilianLor?tab=repositories"
@@ -137,8 +122,8 @@ const Home = () => {
             >
               Todos os repositórios <BsArrowRightShort size="2rem" />
             </a>
-          </ProjectsTitle>
-          <Projects>
+          </section>
+          <section className={styles.projects}>
             <Project
               name="World Soccer Manager"
               description="Comando seu time como um treinador ou como um presidente."
@@ -173,10 +158,10 @@ const Home = () => {
                 "NodeJs",
               ]}
             />
-          </Projects>
-        </ProjectContent>
-      </ProjectContainer>
-    </Page>
+          </section>
+        </div>
+      </div>
+    </div>
   );
 };
 

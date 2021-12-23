@@ -1,17 +1,22 @@
 import { IProps } from "./IProps";
-import { SkillContainer, SkillContent } from "./styles";
+import styles from "./styles.module.scss";
 import { BsArrowRightShort } from "react-icons/bs";
 
 export const Skill = ({ discoveryLink, logo: Icon, title }: IProps) => {
   return (
-    <SkillContainer href={discoveryLink} target="_blank" rel="noopener noreferrer">
-      <SkillContent>
+    <a
+      className={styles.skillContainer}
+      href={discoveryLink}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className={styles.skillContent}>
         <Icon size="4.5rem" />
         <h2>{title}</h2>
-      </SkillContent>
+      </div>
       <h3>
         Ver mais <BsArrowRightShort size="1.5rem" />
       </h3>
-    </SkillContainer>
+    </a>
   );
 };

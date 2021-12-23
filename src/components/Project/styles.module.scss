@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const ProjectContainer = styled.div`
+.projectsContainer {
   width: 20rem;
   background-color: var(--black-1);
   box-shadow: 10px 10px var(--black-3);
@@ -9,9 +7,9 @@ export const ProjectContainer = styled.div`
   justify-content: space-between;
   gap: 1rem;
   padding: 2rem;
-`;
+}
 
-export const TextContainer = styled.div`
+.textContainer {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
@@ -21,9 +19,9 @@ export const TextContainer = styled.div`
     font-size: 1.5rem;
     color: var(--white);
   }
-`;
+}
 
-export const TagsContainer = styled.div`
+.tagsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -40,9 +38,9 @@ export const TagsContainer = styled.div`
     background-color: var(--black-3);
     color: var(--gray);
   }
-`;
+}
 
-export const GitContainer = styled.div`
+.gitContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -61,4 +59,4 @@ export const GitContainer = styled.div`
       filter: brightness(1.2);
     }
   }
-`;
+}
